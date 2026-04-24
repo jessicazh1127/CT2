@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TouchDesigner Experiments</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    color:white;
+    font-family:Helvetica, Arial, sans-serif;
+    text-align:center;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:80px 20px;
+}
+
+/* 标题 */
+h1{
+    font-size:56px;
+    font-weight:300;
+    margin-bottom:100px;
+    letter-spacing:2px;
+}
+
+/* section */
+.section{
+    margin-bottom:140px;
+}
+
+/* 小标题 */
+h2{
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+/* 描述 */
+p{
+    font-size:16px;
+    color:#aaa;
+    margin-bottom:40px;
+}
+
+.note{
+    font-size:14px;
+    color:#666;
+    margin-bottom:60px;
+}
+
+.media{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:60px;
+}
+
+.media img,
+.media video{
+    width:420px;
+    max-width:90%;
+    border:1px solid #222;
+}
+
+/* hover 微动效 */
+.media img:hover,
+.media video:hover{
+    transform:scale(1.03);
+    transition:0.3s;
+}
+
+/* 🔥 process 横向滑动 */
+.process-scroll{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:10px 20px;
+}
+
+.process-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.process-scroll img{
+    height: 300px;
+    width:auto;
+    flex-shrink:0;
+    border:1px solid #222;
+}
+
+/* process hover */
+.process-scroll img:hover{
+    transform:scale(1.08);
+    transition:0.3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>TouchDesigner Experiments</h1>
+
+<!-- Section 1 -->
+<div class="section">
+    <h2>Image & Video</h2>
+    <p>adding noise / threshold / ramp and audio to react with</p>
+    <div class="note">It starts with a banana.</div>
+
+    <div class="media">
+        <img src="td_samples/image_video/12.1.jpg">
+        <img src="td_samples/image_video/12.2.jpg">
+    </div>
+
+    <div class="media">
+        <video src="td_samples/image_video/15.1.mov" controls></video>
+        <video src="td_samples/image_video/15.2.mov" controls></video>
+    </div>
+
+    <div class="media">
+        <video src="td_samples/image_video/13.1.mov" controls></video>
+        <video src="td_samples/image_video/13.2.mov" controls></video>
+        <video src="td_samples/image_video/13.3.mov" controls></video>
+    </div>
+
+    <div class="media">
+        <img src="td_samples/image_video/16.3.jpg">
+        <video src="td_samples/image_video/16.2.mov" controls></video>
+        <video src="td_samples/image_video/16.1.mov" controls></video>
+    </div>
+</div>
+
+<!-- Section 2 -->
+<div class="section">
+    <h2>3D</h2>
+    <p>torus as the base, using noise and transform to add motion</p>
+
+    <div class="media">
+        <img src="td_samples/3D/6.gif">
+        <img src="td_samples/3D/4.gif">
+        <img src="td_samples/3D/5.gif">
+    </div>
+
+    <div class="media">
+        <img src="td_samples/3D/3.gif">
+        <img src="td_samples/3D/2.gif">
+        <img src="td_samples/3D/1.gif">
+    </div>
+
+    <div class="media">
+        <img src="td_samples/3D/11.1.gif">
+        <img src="td_samples/3D/11.2.gif">
+    </div>
+
+    <div class="media">
+        <video src="td_samples/3D/14.mov" controls></video>
+    </div>
+</div>
+
+<!-- Section 3 -->
+<div class="section">
+    <h2>2D</h2>
+    <p>basic shapes with noise, displace, and composite</p>
+
+    <div class="media">
+        <img src="td_samples/2D/7.gif">
+        <img src="td_samples/2D/8.gif">
+        <img src="td_samples/2D/9.gif">
+    </div>
+</div>
+
+<!-- Section 4 -->
+<div class="section">
+    <h2>Process</h2>
+
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/2.png">
+        <div class="caption">
+            light + camera + geometry need to all present to connect to render
+        </div>
+    </div>
+    </div>
+
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/3.png">
+        <div class="caption">
+            A LFO is added to the transform's all xyz position to create a enlarge and shrink effect
+        </div>
+    </div>
+    </div>
+    
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/4.png">
+        <div class="caption">
+           I added a twist effect and connect a LFO to the stength to create a twisting motion
+        </div>
+    </div>
+    </div>
+    
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/5.png">
+        <div class="caption">
+            I added 2 LFO on both twist and transform to create a more complex motion
+        </div>
+    </div>
+    </div>
+
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/6.png">
+        <div class="caption">
+            I replaced the torus with a sphere to see how it looks like
+        </div>
+    </div>
+    </div>
+    
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/7.png">
+        <div class="caption">
+            I used a circle and change the sides to 6 to make it look like a hexagon.
+            Composite 2
+        </div>
+    </div>
+    </div>
+        
+    <div class="process-scroll">
+        <div class="process-item">
+        <img src="td_samples/process/8.png">
+        <div class="caption">
+            I used a circle and change the sides to 6 to make it look like a hexagon.
+            Composite 2
+        </div>
+    </div>
+    </div>
+        <img src="td_samples/process/9.png">
+        <img src="td_samples/process/10.png">
+        <img src="td_samples/process/11.png">
+        <img src="td_samples/process/12.png">
+        <img src="td_samples/process/13.png">
+        <img src="td_samples/process/14.png">
+        <img src="td_samples/process/15.png">
+        <img src="td_samples/process/16.png">
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

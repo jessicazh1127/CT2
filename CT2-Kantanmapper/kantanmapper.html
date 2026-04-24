@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projected Tides</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    color:white;
+    font-family:Helvetica, Arial, sans-serif;
+    text-align:center;
+}
+
+/* 容器 */
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:80px 20px;
+}
+
+/* 标题 */
+h1{
+    font-size:56px;
+    font-weight:300;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+.subtitle{
+    font-size:14px;
+    color:#777;
+    margin-bottom:100px;
+}
+
+/* section */
+.section{
+    margin-bottom:140px;
+}
+
+h2{
+    font-size:26px;
+    font-weight:400;
+    margin-bottom:40px;
+}
+
+/* Final video */
+.final video{
+    width:80%;
+    max-width:900px;
+    border:1px solid #222;
+}
+
+/* 横向滑动（TD效果） */
+.scroll{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    padding:10px 20px;
+}
+
+.scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.scroll video{
+    height:260px;
+    flex-shrink:0;
+    border:1px solid #222;
+}
+
+/* Kantan grid */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    justify-content:center;
+}
+
+.grid img{
+    width:100%;
+    border:1px solid #222;
+}
+
+/* hover subtle */
+video:hover, img:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Projected Tides</h1>
+<div class="subtitle">Projection mapping experiment using Kantan Mapper</div>
+
+<!-- 1️⃣ Final -->
+<div class="section final">
+    <h2>Final Projection</h2>
+    <video src="kantanfinal.mov" controls></video>
+</div>
+
+<!-- 2️⃣ TouchDesigner Effects -->
+<div class="section">
+    <h2>TouchDesigner Experiments</h2>
+
+    <div class="scroll">
+        <video src="13.3.mov" autoplay loop muted playsinline></video>
+        <video src="14.mov" autoplay loop muted playsinline></video>
+        <video src="15.1.mov" autoplay loop muted playsinline></video>
+        <video src="1.mov" autoplay loop muted playsinline></video>
+    </div>
+</div>
+
+<!-- 3️⃣ Kantan Mapper Process -->
+<div class="section">
+    <h2>KantanMapper Process</h2>
+
+    <div class="grid">
+        <img src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+        <img src="4.png">
+        <img src="5.png">
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
