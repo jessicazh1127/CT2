@@ -16,7 +16,6 @@ body{
 .container{
     max-width:1100px;
     margin:0 auto;
-    padding:80px 20px;
 }
 
 /* 标题 */
@@ -52,6 +51,7 @@ p{
     margin-bottom:60px;
 }
 
+/* 图片/视频排版 */
 .media{
     display:flex;
     flex-wrap:wrap;
@@ -67,14 +67,14 @@ p{
     border:1px solid #222;
 }
 
-/* hover 微动效 */
+/* hover */
 .media img:hover,
 .media video:hover{
     transform:scale(1.03);
     transition:0.3s;
 }
 
-/* 🔥 process 横向滑动 */
+/* process 横向滑动 */
 .process-scroll{
     display:flex;
     gap:20px;
@@ -86,15 +86,32 @@ p{
     display:none;
 }
 
-.process-scroll img{
-    height: 300px;
-    width:auto;
+/* 每个 item */
+.process-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     flex-shrink:0;
+}
+
+/* 图片 */
+.process-item img{
+    height:300px;
+    width:auto;
     border:1px solid #222;
 }
 
-/* process hover */
-.process-scroll img:hover{
+/* caption */
+.caption{
+    margin-top:10px;
+    font-size:12px;
+    color:#888;
+    max-width:260px;
+    line-height:1.4;
+}
+
+/* hover */
+.process-item img:hover{
     transform:scale(1.08);
     transition:0.3s;
 }
@@ -120,20 +137,15 @@ p{
     </div>
 
     <div class="media">
-        <img src="td_samples/image_video/15.1.gif" >   
-        <img src="td_samples/image_video/15.2.gif" >
-    </div>
-
-    <div class="media">
-        <img src="td_samples/image_video/13.1.gif" >
-        <img src="td_samples/image_video/13.2.gif" >
-        <img src="td_samples/image_video/13.3.gif" >
+        <img src="td_samples/image_video/13.1.gif">
+        <img src="td_samples/image_video/13.2.gif">
+        <img src="td_samples/image_video/13.3.gif">
     </div>
 
     <div class="media">
         <img src="td_samples/image_video/16.3.jpg">
-        <img src="td_samples/image_video/16.2.gif" >
-        <img src="td_samples/image_video/16.1.gif" >
+        <img src="td_samples/image_video/16.2.gif">
+        <img src="td_samples/image_video/16.1.gif">
     </div>
 </div>
 
@@ -155,12 +167,7 @@ p{
     </div>
 
     <div class="media">
-        <img src="td_samples/3D/11.1.gif">
-        <img src="td_samples/3D/11.2.gif">
-    </div>
-
-    <div class="media">
-        <img src="td_samples/3D/14.gif" >
+        <img src="td_samples/3D/14.gif">
     </div>
 </div>
 
@@ -181,77 +188,105 @@ p{
     <h2>Process</h2>
 
     <div class="process-scroll">
-        <div class="process-item">
-        <img src="td_samples/process/2.png">
-        <div class="caption">
-            light + camera + geometry need to all present to connect to render
-        </div>
-    </div>
-    </div>
 
-    <div class="process-scroll">
         <div class="process-item">
-        <img src="td_samples/process/3.png">
-        <div class="caption">
-            A LFO is added to the transform's all xyz position to create a enlarge and shrink effect
+            <img src="td_samples/process/2.png">
+            <div class="caption">
+                light + camera + geometry need to all present to connect to render
+            </div>
         </div>
-    </div>
-    </div>
-    
-    <div class="process-scroll">
-        <div class="process-item">
-        <img src="td_samples/process/4.png">
-        <div class="caption">
-           I added a twist effect and connect a LFO to the stength to create a twisting motion
-        </div>
-    </div>
-    </div>
-    
-    <div class="process-scroll">
-        <div class="process-item">
-        <img src="td_samples/process/5.png">
-        <div class="caption">
-            I added 2 LFO on both twist and transform to create a more complex motion
-        </div>
-    </div>
-    </div>
 
-    <div class="process-scroll">
         <div class="process-item">
-        <img src="td_samples/process/6.png">
-        <div class="caption">
-            I replaced the torus with a sphere to see how it looks like
+            <img src="td_samples/process/3.png">
+            <div class="caption">
+                LFO drives transform xyz to create scaling motion
+            </div>
         </div>
-    </div>
-    </div>
-    
-    <div class="process-scroll">
+
         <div class="process-item">
-        <img src="td_samples/process/7.png">
-        <div class="caption">
-            I used a circle and change the sides to 6 to make it look like a hexagon.
-            Composite 2
+            <img src="td_samples/process/4.png">
+            <div class="caption">
+                twist effect + LFO creates rotation deformation
+            </div>
         </div>
-    </div>
-    </div>
-        
-    <div class="process-scroll">
+
         <div class="process-item">
-        <img src="td_samples/process/8.png">
-        <div class="caption">
-            I used a circle and change the sides to 6 to make it look like a hexagon.
-            Composite 2
+            <img src="td_samples/process/5.png">
+            <div class="caption">
+                combining two LFOs for more complex motion
+            </div>
         </div>
-    </div>
-    </div>
-        <img src="td_samples/process/9.png">
-        <img src="td_samples/process/10.png">
-        <img src="td_samples/process/11.png">
-        <img src="td_samples/process/12.png">
-        <img src="td_samples/process/13.png">
-        <img src="td_samples/process/14.png">
-        <img src="td_samples/process/15.png">
-        <img src="td_samples/process/16.png">
+
+        <div class="process-item">
+            <img src="td_samples/process/6.png">
+            <div class="caption">
+                replacing torus with sphere
+            </div>
+        </div>
+
+        <div class="process-item">
+            <img src="td_samples/process/7.png">
+            <div class="caption">
+                hexagon shape from circle + composite
+            </div>
+        </div>
+
+        <div class="process-item">
+            <img src="td_samples/process/8.png">
+            <div class="caption">
+                layering geometry for pattern
+            </div>
+        </div>
+
+        <div class="process-item">
+            <img src="td_samples/process/9.png">
+            <div class="caption">
+                connect circle with a noise to create a star like background, then composite with the hexagon pattern
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/10.png">
+            <div class="caption">
+                add a LFO to the rotation of transform to create motion, and a displace to create a shooting star effect
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/11.png">
+            <div class="caption">
+                adding noise after transform, after render, add an edge to make it look transparent, then add a feedback to create a tail effect
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/12.png">
+            <div class="caption">
+                use image as a base to try edge and ramp effect
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/13.png">
+            <div class="caption">
+                audiofilein to connect with the "passes"in common of diplace,change UV weight and offset data, also adding ramp to change effects
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/14.png">
+            <div class="caption">
+                add noise with a pointtransform, and a LFO in the translate z to create a flying through space effect
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/15.png">
+            <div class="caption">
+                in edge TOP, output edge only and composite with the original image
+            </div>
+        </div>
+        <div class="process-item">
+            <img src="td_samples/process/16.png">
+            <div class="caption">
+                alligator noise type looks a bubble on the surface of the image, connect it with a audio to make it react with the music
+            </div>
+        </div>
+
     </div>
 </div>
 
