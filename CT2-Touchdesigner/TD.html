@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>TouchDesigner Experiments</title>
+<title>Projected Tides</title>
 
 <style>
 body{
@@ -22,8 +22,15 @@ body{
 h1{
     font-size:56px;
     font-weight:300;
-    margin-bottom:100px;
+    margin-top:80px;
+    margin-bottom:10px;
     letter-spacing:2px;
+}
+
+.subtitle{
+    font-size:14px;
+    color:#777;
+    margin-bottom:100px;
 }
 
 /* section */
@@ -31,14 +38,12 @@ h1{
     margin-bottom:140px;
 }
 
-/* 小标题 */
 h2{
     font-size:28px;
     font-weight:400;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
-/* 描述 */
 p{
     font-size:16px;
     color:#aaa;
@@ -51,7 +56,7 @@ p{
     margin-bottom:60px;
 }
 
-/* 图片/视频排版 */
+/* media */
 .media{
     display:flex;
     flex-wrap:wrap;
@@ -74,30 +79,36 @@ p{
     transition:0.3s;
 }
 
-/* process 横向滑动 */
-.process-scroll{
+/* 横向 scroll（通用） */
+.scroll{
     display:flex;
     gap:20px;
     overflow-x:auto;
     padding:10px 20px;
 }
 
-.process-scroll::-webkit-scrollbar{
+.scroll::-webkit-scrollbar{
     display:none;
 }
 
-/* 每个 item */
-.process-item{
+/* scroll item */
+.scroll-item{
     display:flex;
     flex-direction:column;
     align-items:center;
     flex-shrink:0;
 }
 
-/* 图片 */
-.process-item img{
-    height:300px;
+/* scroll image */
+.scroll-item img{
+    height:260px;
     width:auto;
+    border:1px solid #222;
+}
+
+/* scroll video */
+.scroll-item video{
+    height:260px;
     border:1px solid #222;
 }
 
@@ -111,9 +122,17 @@ p{
 }
 
 /* hover */
-.process-item img:hover{
+.scroll-item img:hover,
+.scroll-item video:hover{
     transform:scale(1.08);
     transition:0.3s;
+}
+
+.vimeo{
+    width:80%;
+    max-width:900px;
+    height:500px;
+    border:1px solid #222;
 }
 
 </style>
@@ -123,13 +142,17 @@ p{
 
 <div class="container">
 
-<h1>TouchDesigner Experiments</h1>
+<h1>Projected Tides</h1>
+<div class="subtitle">
+A projection mapping installation using generative visuals created in TouchDesigner
+</div>
 
-<!-- Section 1 -->
+<!-- ===================== -->
+<!-- 1️⃣ TouchDesigner Samples -->
+<!-- ===================== -->
+
 <div class="section">
-    <h2>Image & Video</h2>
-    <p>adding noise / threshold / ramp and audio to react with</p>
-    <div class="note">It starts with a banana.</div>
+    <h2>TouchDesigner Experiments</h2>
 
     <div class="media">
         <img src="td_samples/image_video/12.1.png">
@@ -149,142 +172,149 @@ p{
     </div>
 </div>
 
-<!-- Section 2 -->
-<div class="section">
-    <h2>3D</h2>
-    <p>torus as the base, using noise and transform to add motion</p>
+<!-- ===================== -->
+<!-- 2️⃣ TD Process -->
+<!-- ===================== -->
 
-    <div class="media">
-        <img src="td_samples/3D/6.gif">
-        <img src="td_samples/3D/4.gif">
-        <img src="td_samples/3D/5.gif">
-    </div>
-
-    <div class="media">
-        <img src="td_samples/3D/3.gif">
-        <img src="td_samples/3D/2.gif">
-        <img src="td_samples/3D/1.gif">
-    </div>
-
-    <div class="media">
-        <img src="td_samples/3D/14.gif">
-    </div>
-</div>
-
-<!-- Section 3 -->
-<div class="section">
-    <h2>2D</h2>
-    <p>basic shapes with noise, displace, and composite</p>
-
-    <div class="media">
-        <img src="td_samples/2D/7.gif">
-        <img src="td_samples/2D/8.gif">
-        <img src="td_samples/2D/9.gif">
-    </div>
-</div>
-
-<!-- Section 4 -->
 <div class="section">
     <h2>Process</h2>
 
-    <div class="process-scroll">
+    <div class="scroll">
 
-        <div class="process-item">
+        <div class="scroll-item">
             <img src="td_samples/process/2.png">
-            <div class="caption">
-                light + camera + geometry need to all present to connect to render
-            </div>
+            <div class="caption">light + camera + geometry need to all present to connect to render</div>
         </div>
 
-        <div class="process-item">
+        <div class="scroll-item">
             <img src="td_samples/process/3.png">
-            <div class="caption">
-                LFO drives transform xyz to create scaling motion
-            </div>
+            <div class="caption">LFO drives transform xyz to create scaling motion</div>
         </div>
 
-        <div class="process-item">
+        <div class="scroll-item">
             <img src="td_samples/process/4.png">
-            <div class="caption">
-                twist effect + LFO creates rotation deformation
-            </div>
+            <div class="caption">twist effect + LFO creates rotation deformation</div>
         </div>
 
-        <div class="process-item">
+        <div class="scroll-item">
             <img src="td_samples/process/5.png">
-            <div class="caption">
-                combining two LFOs for more complex motion
-            </div>
+            <div class="caption">combining two LFOs for more complex motion</div>
         </div>
 
-        <div class="process-item">
-            <img src="td_samples/process/6.png">
-            <div class="caption">
-                replacing torus with sphere
-            </div>
+        <div class="scroll-item"> 
+            <img src="td_samples/process/6.png"> 
+            <div class="caption"> replacing torus with sphere </div> 
+        </div> 
+
+        <div class="scroll-item"> 
+            <img src="td_samples/process/7.png"> 
+            <div class="caption"> hexagon shape from circle + composite </div> 
+        </div> 
+        <div class="scroll-item"> 
+            <img src="td_samples/process/8.png"> 
+            <div class="caption"> layering geometry for pattern </div> 
+        </div> 
+
+        <div class="scroll-item"> 
+            <img src="td_samples/process/9.png"> 
+            <div class="caption"> connect circle with a noise to create a star like background, then composite with the hexagon pattern </div> 
+        </div> 
+
+        <div class="scroll-item">
+            <img src="td_samples/process/10.png"> 
+            <div class="caption"> add a LFO to the rotation of transform to create motion, and a displace to create a shooting star effect </div> 
+        </div> 
+
+        <div class="scroll-item"> 
+            <img src="td_samples/process/12.png"> 
+            <div class="caption"> use image as a base to try edge and ramp effect </div> 
+    </div> 
+
+        <div class="scroll-item"> 
+            <img src="td_samples/process/13.png"> 
+            <div class="caption"> audiofilein to connect with the "passes"in common of diplace,change UV weight and offset data, also adding ramp to change effects </div> 
+    </div> 
+
+        <div class="scroll-item"> 
+            <img src="td_samples/process/14.png"> 
+            <div class="caption"> add noise with a pointtransform, and a LFO in the translate z to create a flying through space effect </div> 
+    </div> 
+
+        <div class="scroll-item"> 
+            <img src="td_samples/process/15.png"> 
+            <div class="caption"> in edge TOP, output edge only and composite with the original image </div> 
+    </div> 
+        
+        <div class="scroll-item"> 
+            <img src="td_samples/process/16.png"> 
+            <div class="caption"> alligator noise type looks a bubble on the surface of the image, connect it with a audio to make it react with the music </div>
         </div>
 
-        <div class="process-item">
-            <img src="td_samples/process/7.png">
-            <div class="caption">
-                hexagon shape from circle + composite
-            </div>
+
+    </div>
+</div>
+
+        <div class="section final">
+    <h2>Final Projection</h2>
+    <iframe 
+    src="https://player.vimeo.com/video/1186587575" 
+    class="vimeo"
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+</div>
+
+
+
+<div class="section">
+    <h2>TouchDesigner Effects</h2>
+
+    <div class="scroll">
+        <div class="scroll-item">
+            <img src="td_samples/image_video/13.3.gif">
+        </div>
+        <div class="scroll-item">
+     <img src="td_samples/image_video/16.2.gif">
+        </div>
+        <div class="scroll-item">
+            <img src="td_samples/3D/14.gif">
+        </div>
+        <div class="scroll-item">
+            <img src="td_samples/3D/1.gif">
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>KantanMapper Process</h2>
+
+    <div class="scroll">
+
+        <div class="scroll-item">
+            <img src="Kantanmapper/1.png">
+            <div class="caption">add a KantanMapper, find it in the Palette - Mapping - kantaMapper - kantan - open kantan window</div>
         </div>
 
-        <div class="process-item">
-            <img src="td_samples/process/8.png">
-            <div class="caption">
-                layering geometry for pattern
-            </div>
+        <div class="scroll-item">
+            <img src="Kantanmapper/2.png">
+            <div class="caption">in tool bar section, use the rectangle tool to define the projection area, freeform can be used for more complex shapes</div>
         </div>
 
-        <div class="process-item">
-            <img src="td_samples/process/9.png">
-            <div class="caption">
-                connect circle with a noise to create a star like background, then composite with the hexagon pattern
-            </div>
+        <div class="scroll-item">
+            <img src="Kantanmapper/3.png">
+            <div class="caption">adding the output"out" of the projects wanted to project to the texture, rememeber to play the timeline before adding in, otherwise it won't let you add it</div>
         </div>
-        <div class="process-item">
-            <img src="td_samples/process/10.png">
-            <div class="caption">
-                add a LFO to the rotation of transform to create motion, and a displace to create a shooting star effect
-            </div>
+
+        <div class="scroll-item">
+            <img src="Kantanmapper/4.png">
+            <div class="caption">click on the "x" then a ✅will appear，the the projects will shown in the frames</div>
         </div>
-        <div class="process-item">
-            <img src="td_samples/process/11.png">
-            <div class="caption">
-                adding noise after transform, after render, add an edge to make it look transparent, then add a feedback to create a tail effect
-            </div>
-        </div>
-        <div class="process-item">
-            <img src="td_samples/process/12.png">
-            <div class="caption">
-                use image as a base to try edge and ramp effect
-            </div>
-        </div>
-        <div class="process-item">
-            <img src="td_samples/process/13.png">
-            <div class="caption">
-                audiofilein to connect with the "passes"in common of diplace,change UV weight and offset data, also adding ramp to change effects
-            </div>
-        </div>
-        <div class="process-item">
-            <img src="td_samples/process/14.png">
-            <div class="caption">
-                add noise with a pointtransform, and a LFO in the translate z to create a flying through space effect
-            </div>
-        </div>
-        <div class="process-item">
-            <img src="td_samples/process/15.png">
-            <div class="caption">
-                in edge TOP, output edge only and composite with the original image
-            </div>
-        </div>
-        <div class="process-item">
-            <img src="td_samples/process/16.png">
-            <div class="caption">
-                alligator noise type looks a bubble on the surface of the image, connect it with a audio to make it react with the music
-            </div>
+
+        <div class="scroll-item">
+            <img src="Kantanmapper/5.png">
+            <div class="caption">toggle output to the surface and adjust the shape of frame</div>
         </div>
 
     </div>
