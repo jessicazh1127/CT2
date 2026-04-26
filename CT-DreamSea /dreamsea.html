@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Unity - Dreamspace</title>
+<title>Dream Sea</title>
 
 <style>
 
 body{
     margin:0;
     font-family:Arial, sans-serif;
+    background:#FFF6DD;
+    color:black;
     text-align:center;
 }
+
+/* ===================== */
+/* 标题 */
+/* ===================== */
 
 h1{
     margin-top:60px;
@@ -20,17 +26,72 @@ h1{
 p{
     font-size:20px;
     margin-bottom:60px;
+    color:#333;
 }
 
 h2{
     margin:80px 0 40px 0;
+    font-size:28px;
 }
 
-/* 图片占满屏幕 */
+/* ===================== */
+/* Vimeo video */
+/* ===================== */
+
+.video{
+    width:100%;
+    max-width:1000px;
+    height:560px;
+    margin:0 auto;
+    display:block;
+    border:0;
+}
+
+/* ===================== */
+/* full image */
+/* ===================== */
+
 .images img{
     width:100%;
     height:auto;
     margin-bottom:30px;
+}
+
+/* ===================== */
+/* horizontal scroll */
+/* ===================== */
+
+.scroll{
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    padding:10px 20px;
+}
+
+.scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.scroll-item{
+    display:flex;
+    flex-direction:column;
+    flex-shrink:0;
+    align-items:flex-start; /* 左对齐 */
+}
+
+.scroll-item img{
+    height:260px;
+    width:auto;
+}
+
+/* caption */
+.caption{
+    margin-top:15px;
+    font-size:15px;
+    text-align:left;
+    color:#444;
+    max-width:260px;
+    line-height:1.4;
 }
 
 </style>
@@ -38,32 +99,128 @@ h2{
 
 <body>
 
-<h1>Unity</h1>
+<h1>Dream Sea</h1>
 
-<p>This is a dreamspace — an endless ocean with many islands.</p>
+<p>
+A very small isolated island. Only palm trees and sunset exist on the island.
+</p>
 
-<h2>Part 1: Final Output</h2>
+<!-- ===================== -->
+<!-- Section 1 -->
+<!-- ===================== -->
+
+<h2>01 — Walk on the Island</h2>
+
+<iframe 
+class="video"
+src="https://player.vimeo.com/video/1186658767"
+allow="autoplay; fullscreen; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<!-- ===================== -->
+<!-- Section 2 -->
+<!-- ===================== -->
+
+<h2>02 — Inspiration</h2>
+
 <div class="images">
-<img src="final1.jpg">
-<img src="final2.jpg">
-<img src="final3.jpg">
+    <img src="inspiration.jpg">
 </div>
 
-<h2>Part 2: Inspiration</h2>
-<div class="images">
-<img src="inspiration.jpg">
+<!-- ===================== -->
+<!-- Section 3 -->
+<!-- ===================== -->
+
+<h2>03 — Process (Sea Plant)</h2>
+
+<div class="scroll">
+
+    <div class="scroll-item">
+        <img src="sea_plant/1.png">
+        <div class="caption">initial idea: create a terrain on a terrain, but it didn't work out as expected</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/2.png">
+        <div class="caption">instead, I decided to use only one terrain</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/3.png">
+        <div class="caption">use different textures for the terrain</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/4.png">
+        <div class="caption">Water set: Simple water shader URP</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/5.png">
+        <div class="caption">change water properties</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/6.png">
+        <div class="caption">water reflection test, change the position of the light source</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/7.png">
+        <div class="caption">use Mass Place Tree to randomize tree placement</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/8.png">
+        <div class="caption">shift+click can erase trees that are already placed</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/9.png">
+        <div class="caption">use palm trees assets as decorative elements, just drag the palm trees to the terrain</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/10.png">
+        <div class="caption">adjust the position and scale of the palm trees</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/11.png">
+        <div class="caption">see it from different angles to check the composition</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="sea_plant/12.png">
+        <div class="caption">final composition export</div>
+    </div>
+
 </div>
 
-<h2>Part 3: Sketches</h2>
-<div class="images">
-<img src="sketch.jpg">
-</div>
+<!-- ===================== -->
+<!-- Section 4 -->
+<!-- ===================== -->
 
-<h2>Part 4: Process</h2>
-<div class="images">
-<img src="process1.jpg">
-<img src="process2.jpg">
-<img src="process3.jpg">
+<h2>04 — Menu Design</h2>
+
+<div class="scroll">
+
+    <div class="scroll-item">
+        <img src="menu/13.png">
+        <div class="caption">menu layout exploration</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="menu/14.png">
+        <div class="caption">UI interaction design</div>
+    </div>
+
+    <div class="scroll-item">
+        <img src="menu/15.png">
+        <div class="caption">final menu composition</div>
+    </div>
+
 </div>
 
 </body>

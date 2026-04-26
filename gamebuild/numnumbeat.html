@@ -248,19 +248,19 @@ A 2D pixel rhythm game where players use muscle signals to control the character
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/2.png">
-                <div class="caption">tile palette setup</div>
+                <div class="caption">use tile palette to create background texture(big scale)</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/3.png">
-                <div class="caption">painting tilemap</div>
+                <div class="caption">use the big scale texture to paint the background</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/4.png">
-                <div class="caption">add rigidbody + ground layer</div>
+                <div class="caption">the tilemap need to add a rigidbody and set it as layer: ground</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/5.png">
-                <div class="caption">collider setup for traps</div>
+                <div class="caption">add a box collider to the trap, edit collider to fit the trap shape</div>
             </div>
         </div>
     </div>
@@ -269,32 +269,32 @@ A 2D pixel rhythm game where players use muscle signals to control the character
     <div class="process-section">
         <h3>02 — Character</h3>
         <div class="process-text">
-            Movement, animation, interaction, and restart logic.
+            movement, death and restart, and interaction with objects
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/character/1.png">
-                <div class="caption">character asset</div>
+                <div class="caption">character set: Simple 2D Platformer Assets Pack</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/character/2.png">
-                <div class="caption">rigidbody + collider</div>
+                <div class="caption">add a rigidbody component and a box collider</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/character/3.png">
-                <div class="caption">behavior scripts</div>
+                <div class="caption">there are several scripts for character behavior: collect apples, character movement, character life</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/character/4.png">
-                <div class="caption">animation state machine</div>
+                <div class="caption">character animation setup, e.g. if run stopped, then idle</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/character/5.png">
-                <div class="caption">constant movement</div>
+                <div class="caption">character move at a constant steady speed of 7f to the right</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/character/6.png">
-                <div class="caption">restart music on death</div>
+                <div class="caption">in character life script, restart the background music when the character dies. i added it in character life script because it's more convenient</div>
             </div>
         </div>
     </div>
@@ -307,17 +307,16 @@ A 2D pixel rhythm game where players use muscle signals to control the character
         </div>
         <div class="scroll">
             <div class="scroll-item">
-                <img src="unityprocess/apple/1.png">
-                <div class="caption">components setup</div>
-            </div>
-            <div class="scroll-item">
-                <img src="unityprocess/apple/2.png">
-                <div class="caption">sound script</div>
-            </div>
-            <div class="scroll-item">
-                <img src="unityprocess/apple/3.png">
-                <div class="caption">audio asset</div>
-            </div>
+                <img src="unityprocess/apple/1.png"> 
+                <div class="caption">add a box collider 2D, an animator, an audio source, and an apple sound script to the apple</div> 
+            </div> 
+            <div class="scroll-item"> 
+                <img src="unityprocess/apple/2.png"> 
+                <div class="caption">collecting apple sound script</div> 
+            </div> 
+            <div class="scroll-item"> 
+                <img src="unityprocess/apple/3.png"> 
+                <div class="caption">beat sound set: Casual Game SFX Pack</div>
         </div>
     </div>
 
@@ -330,19 +329,19 @@ A 2D pixel rhythm game where players use muscle signals to control the character
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/menu/4.png">
-                <div class="caption">new menu scene</div>
+                <div class="caption">save the game scene and create a new scene for the menu</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/menu/5.png">
-                <div class="caption">UI buttons</div>
+                <div class="caption">create a panel and add buttons</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/menu/7.png">
-                <div class="caption">build settings (scene index)</div>
+                <div class="caption">open scene list (file - build profile - scenes list) number the both scenes</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/menu/8.png">
-                <div class="caption">button onclick setup</div>
+                <div class="caption">onclick event setup for menu buttons</div>
             </div>
         </div>
     </div>
@@ -351,16 +350,16 @@ A 2D pixel rhythm game where players use muscle signals to control the character
     <div class="process-section">
         <h3>05 — Arduino Connection</h3>
         <div class="process-text">
-            Mapping muscle sensor data to gameplay input.
+            connecting Unity with Arduino input to control the gameplay
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/arduino/1.png">
-                <div class="caption">threshold setup</div>
+                <div class="caption">connection setup, set the number 800 which is the number when i squeeze detected by my muscle sensor</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/arduino/2.png">
-                <div class="caption">jump trigger logic</div>
+                <div class="caption">if the number is above 800, the character will jump, otherwise it will not</div>
             </div>
         </div>
     </div>
@@ -378,17 +377,17 @@ A 2D pixel rhythm game where players use muscle signals to control the character
 
         <div class="scroll-item">
             <img src="arduinoprocess/process1.png">
-            <div class="caption">sensor setup</div>
+            <div class="caption">setting up sensor input</div>
         </div>
 
         <div class="scroll-item">
             <img src="arduinoprocess/process2.JPG">
-            <div class="caption">muscle signal testing</div>
+            <div class="caption">testing muscle signal</div>
         </div>
 
         <div class="scroll-item">
             <img src="arduinoprocess/process3.JPG">
-            <div class="caption">circuit connection</div>
+            <div class="caption">connection method</div>
         </div>
 
     </div>
