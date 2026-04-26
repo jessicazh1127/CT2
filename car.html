@@ -30,6 +30,9 @@ h2{
     font-size:28px;
 }
 
+/* ===================== */
+/* 原有布局 */
+/* ===================== */
 
 .images{
     display:flex;
@@ -37,14 +40,12 @@ h2{
     align-items:center;
 }
 
-
 .row{
     display:flex;
     justify-content:center;
     gap:20px;
     margin-bottom:40px;
 }
-
 
 .row img{
     width:45%;
@@ -54,9 +55,51 @@ h2{
 .images img{
     width:100%;
     max-width:1000px;
-    margin: bottom 10px;
+    margin-bottom:10px;
 }
 
+/* ===================== */
+/* ⭐ Process 横向scroll */
+/* ===================== */
+
+.process-scroll{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    padding:20px 0;
+}
+
+.process-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.process-item{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start; /* 左对齐 */
+    flex-shrink:0;
+}
+
+.process-item img{
+    height:300px;
+    width:auto;
+}
+
+/* caption */
+
+.process-caption{
+    margin-top:15px;
+    font-size:14px;
+    text-align:left;
+    max-width:600px;
+}
+
+/* hover */
+
+.process-item img:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
 
 </style>
 
@@ -72,17 +115,14 @@ This is a car and car-plane design in my imagined world — a high consumption a
 
 <h2>Part 1: Final Output</h2>
 
+<div class="row">
+    <img src="carimage/car1.png">
+    <img src="carimage/car3.png">
+</div>
 
-    <div class="row">
-        <img src="carimage/car1.png">
-        <img src="carimage/car3.png">
-    </div>
-
-    <div class="row">
-        <img src="carimage/car5.png">
-        <img src="carimage/car6.png">
-    </div>
-
+<div class="row">
+    <img src="carimage/car5.png">
+    <img src="carimage/car6.png">
 </div>
 
 <h2>Part 2: World Introduction</h2>
@@ -97,22 +137,65 @@ Alternative way to travel, so they fly.
 </div>
 
 <h2>Part 3: Inspiration</h2>
+
 <div class="images">
     <img src="carimage/inspiration.JPG">    
     <img src="carimage/inspiration2.jpg">
 </div>
 
-
-
 <h2>Part 4: Process</h2>
-<div class="images">
-    <img src="carimage/Process1.png">
-    <img src="carimage/process2.png">
-    <img src="carimage/Process3.png">
-    <img src="carimage/jiang1.png">
-    <img src="carimage/jiang2.png">
-    <img src="carimage/jiang3.png">
+
+<div class="process-scroll">
+    <div class="process-item">
+        <img src="carimage/1.png">
+        <div class="process-caption">
+            some shortcut in blender
+        </div>
     </div>
+
+    <div class="process-item">
+        <img src="carimage/Process1.png">
+        <div class="process-caption">
+            i add some furnitures in the car to make it more like a living space, because in this world, people care more about the experience of traveling rather than the efficiency of transportation.
+        </div>
+    </div>
+
+    <div class="process-item">
+        <img src="carimage/process2.png">
+        <div class="process-caption">
+            before adding color, the shape of the car, and i want to make it look more futuristic and more like a flying car
+        </div>
+    </div>
+
+    <div class="process-item">
+        <img src="carimage/Process3.png">
+        <div class="process-caption">
+            I found a car paint material and glass tutorial online, I want the car to convey a sense of personalization and uniqueness, so i  make the glass look more like a mirror, which is more like in a SF movie .
+        </div>
+    </div>
+
+    <div class="process-item">
+        <img src="carimage/jiang1.png">
+        <div class="process-caption">
+            the process of making propellers, which is the most important part of the car, because it is a flying car, so the propellers are the key to make it fly.
+        </div>
+    </div>
+
+    <div class="process-item">
+        <img src="carimage/jiang2.png">
+        <div class="process-caption">
+            First use loop cut(crol+r) to add more edge, then use knife tool(k) to cut the shape of the propeller
+        </div>
+    </div>
+
+    <div class="process-item">
+        <img src="carimage/jiang3.png">
+        <div class="process-caption">
+            Then use extrude(e) to make it 3D, and then use subdivision surface modifier to make it smoother.
+        </div>
+        </div>
+    </div>
+
 </div>
 
 </body>
