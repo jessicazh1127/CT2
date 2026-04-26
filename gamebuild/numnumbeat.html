@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NUM NUM BEAT</title>
+
+<style>
+body{
+    margin:0;
+    background:#DBAEC1;
+    color:white;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:80px 20px;
+}
+
+/* 标题 */
+h1{
+    text-align:center;
+    font-size:56px;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:14px;
+    color:#eee;
+    margin-bottom:100px;
+}
+
+/* section */
+.section{
+    margin-bottom:140px;
+}
+
+h2{
+    text-align:center;
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:60px;
+}
+
+/* ===================== */
+/* 视频 */
+/* ===================== */
+
+.video-layout{
+    display:flex;
+    gap:20px;
+}
+
+.main-video{
+    flex:2;
+}
+
+.main-video iframe{
+    width:100%;
+    height:500px;
+    border:0;
+}
+
+.side-scroll{
+    flex:1;
+    height:500px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.side-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.side-scroll iframe{
+    width:100%;
+    height:240px;
+    border:0;
+}
+
+/* ===================== */
+/* inspiration */
+/* ===================== */
+
+.media{
+    display:flex;
+    gap:20px;
+    width:100%;
+}
+
+.media img{
+    height:400px;
+    width:auto;
+    flex:1;
+    object-fit:contain;
+}
+
+/* ===================== */
+/* process */
+/* ===================== */
+
+.process-section{
+    margin-bottom:80px;
+}
+
+.process-section h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.process-text{
+    font-size:13px;
+    color:#eee;
+    margin-bottom:20px;
+}
+
+/* scroll */
+
+.scroll{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+}
+
+.scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.scroll-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.scroll-item img{
+    height:240px;
+    width:auto;
+}
+
+/* caption */
+
+.caption{
+    margin-top:10px;
+    font-size:12px;
+    color:#eee;
+    max-width:240px;
+    text-align:center;
+    opacity:0.7;
+}
+
+.scroll-item:hover .caption{
+    opacity:1;
+}
+
+/* hover */
+
+img:hover, iframe:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>NUM NUM BEAT</h1>
+<div class="subtitle">
+A 2D pixelrhythm game where players using muscle to control the character to avoid traps and collect apples, creating a unique rhythm experience.
+</div>
+
+<!-- 视频 -->
+<div class="section">
+    <h2>Gameplay & Control</h2>
+
+    <div class="video-layout">
+
+        <div class="main-video">
+            <iframe src="https://player.vimeo.com/video/1186601818" allowfullscreen></iframe>
+        </div>
+
+        <div class="side-scroll">
+            <iframe src="https://player.vimeo.com/video/1186601883"></iframe>
+            <iframe src="https://player.vimeo.com/video/1186601896"></iframe>
+        </div>
+
+    </div>
+</div>
+
+<!-- inspiration -->
+<div class="section">
+    <h2>Design Background</h2>
+
+    <div class="media">
+        <img src="inspiration.png">
+        <img src="inspiration2.jpg">
+    </div>
+</div>
+
+<!-- Unity -->
+<div class="section">
+    <h2>Unity Process</h2>
+
+    <!-- 1 -->
+    <div class="process-section">
+        <h3>01 — Background</h3>
+        <div class="process-text">
+            methods of creating the background image, and how to make the music play every time the game starts
+        </div>
+        <div class="scroll">
+            <div class="scroll-item">
+                <img src="unityprocess/background/1.png">
+                <div class="caption">background set:pixel adventure 1</div>
+            </div>
+            <div class="scroll-item">
+                <img src="unityprocess/background/2.png">
+                <div class="caption">use tile palette to create background texture(big scale)</div>
+            </div>
+            <div class="scroll-item">
+                <img src="unityprocess/background/3.png">
+                <div class="caption">use the big scale texture to paint the background</div>
+            </div>
+            <div class="scroll-item">
+                <img src="unityprocess/background/4.png">
+                <div class="caption">the tilemap need to add a rigidbody and set it as layer: ground</div>
+            </div>
+            <div class="scroll-item">
+                <img src="unityprocess/background/5.png">
+                <div class="caption">add a box collider to the trap, edit collider to fit the trap shape</div>
+            </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="process-section">
+        <h3>02 — Character & Music</h3>
+        <div class="process-text">
+            movement, death and restart, and interaction with objects
+        </div>
+        <div class="scroll">
+            <div class="scroll-item">
+                <img src="unityprocess/character/1.png">
+                <div class="caption">character set: Simple 2D Platformer Assets Pack</div>
+            </div>
+
+            <div class="scroll-item">
+                <img src="unityprocess/character/2.png">
+                <div class="caption">add a rigidbody component and a box collider</div>
+            </div>
+
+            <div class="scroll-item">
+                <img src="unityprocess/character/3.png">
+                <div class="caption">there are several scripts for character behavior: collect apples, character movement, character life</div>
+            </div>
+
+            <div class="scroll-item">
+                <img src="unityprocess/character/7.png">
+                <div class="caption">creating the character's animation: drag the sprite into the animation window, change the samples number to change the speed of the animation</div>
+            </div>
+
+            <div class="scroll-item">
+                <img src="unityprocess/character/4.png">
+                <div class="caption">character animation setup, e.g. if run stopped, then idle</div>
+            </div>
+
+            <div class="scroll-item">
+                <img src="unityprocess/character/5.png">
+                <div class="caption">character move at a constant steady speed of 7f to the right</div> 
+            </div>
+            <div class="scroll-item">
+                <img src="unityprocess/character/6.png">
+                <div class="caption">in character life script, restart the background music when the character dies. i added it in character life script because it's more convenient</div> 
+            </div>
+            
+
+
+    
+    </div>
+
+    <!-- 3 -->
+    <div class="process-section">
+        <h3>03 — Apples(Beats)</h3>
+        <div class="process-text">
+            adding beat sound to objects and making them react with the character
+        </div>
+        <div class="scroll">
+            <div class="scroll-item">
+                <img src="unity/5.png">
+                <div class="caption">adding sound trigger</div>
+            </div>
+            <div class="scroll-item">
+                <img src="unity/6.png">
+                <div class="caption">interaction with player</div>
+            </div>
+            <div class="scroll-item">
+                <img src="unity/7.png">
+                <div class="caption">apple collection effect</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="process-section">
+        <h3>04 — Menu</h3>
+        <div class="process-text">
+            creating a start menu interface for entering the game
+        </div>
+        <div class="scroll">
+            <div class="scroll-item">
+                <img src="unity/7.png">
+                <div class="caption">menu UI setup</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="process-section">
+        <h3>05 — Arduino Connection</h3>
+        <div class="process-text">
+            connecting Unity with Arduino input to control the gameplay
+        </div>
+        <div class="scroll">
+            <div class="scroll-item">
+                <img src="unity/8.png">
+                <div class="caption">data connection</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Arduino -->
+<div class="section">
+    <h2>Arduino Process</h2>
+
+    <div class="scroll">
+
+        <div class="scroll-item">
+            <img src="arduinoprocess/process1.png">
+            <div class="caption">setting up sensor input</div>
+        </div>
+
+        <div class="scroll-item">
+            <img src="arduinoprocess/process2.JPG">
+            <div class="caption">testing muscle signal</div>
+        </div>
+
+        <div class="scroll-item">
+            <img src="arduinoprocess/process3.JPG">
+            <div class="caption">connection method</div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
