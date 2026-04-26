@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NUM NUM BEAT</title>
+<title>NOM NOM BEAT</title>
 
 <style>
 body{
@@ -83,6 +83,16 @@ h2{
     border:0;
 }
 
+/* 视频说明 */
+.video-caption{
+    margin-top:20px;
+    font-size:15px;
+    color:#eee;
+    text-align:left;
+    line-height:1.6;
+    opacity:0.8;
+}
+
 /* ===================== */
 /* inspiration */
 /* ===================== */
@@ -114,7 +124,7 @@ h2{
 }
 
 .process-text{
-    font-size:13px;
+    font-size:15px;
     color:#eee;
     margin-bottom:20px;
 }
@@ -147,7 +157,7 @@ h2{
 
 .caption{
     margin-top:10px;
-    font-size:12px;
+    font-size:15px;
     color:#eee;
     max-width:240px;
     text-align:center;
@@ -171,30 +181,44 @@ img:hover, iframe:hover{
 
 <div class="container">
 
-<h1>NUM NUM BEAT</h1>
+<h1>NOM NOM BEAT</h1>
 <div class="subtitle">
-A 2D pixelrhythm game where players using muscle to control the character to avoid traps and collect apples, creating a unique rhythm experience.
+A 2D pixel rhythm game where players use muscle signals to control the character to avoid traps and collect apples, creating a unique embodied rhythm experience.
 </div>
 
+<!-- ===================== -->
 <!-- 视频 -->
+<!-- ===================== -->
+
 <div class="section">
     <h2>Gameplay & Control</h2>
 
     <div class="video-layout">
 
+        <!-- 主视频 -->
         <div class="main-video">
             <iframe src="https://player.vimeo.com/video/1186601818" allowfullscreen></iframe>
         </div>
 
+        <!-- 右侧 -->
         <div class="side-scroll">
             <iframe src="https://player.vimeo.com/video/1186601883"></iframe>
             <iframe src="https://player.vimeo.com/video/1186601896"></iframe>
         </div>
 
     </div>
+
+    <!-- 视频说明 -->
+    <div class="video-caption">
+        Comments:when will the game end?<br>
+        Solving solusion: I may add another end scene to the game, including a final points and can choose to leave or restart.
+
 </div>
 
+<!-- ===================== -->
 <!-- inspiration -->
+<!-- ===================== -->
+
 <div class="section">
     <h2>Design Background</h2>
 
@@ -204,7 +228,10 @@ A 2D pixelrhythm game where players using muscle to control the character to avo
     </div>
 </div>
 
+<!-- ===================== -->
 <!-- Unity -->
+<!-- ===================== -->
+
 <div class="section">
     <h2>Unity Process</h2>
 
@@ -212,95 +239,84 @@ A 2D pixelrhythm game where players using muscle to control the character to avo
     <div class="process-section">
         <h3>01 — Background</h3>
         <div class="process-text">
-            methods of creating the background image, and how to make the music play every time the game starts
+            Methods of creating the background and triggering music at game start.
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/background/1.png">
-                <div class="caption">background set:pixel adventure 1</div>
+                <div class="caption">background asset: Pixel Adventure</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/2.png">
-                <div class="caption">use tile palette to create background texture(big scale)</div>
+                <div class="caption">tile palette setup</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/3.png">
-                <div class="caption">use the big scale texture to paint the background</div>
+                <div class="caption">painting tilemap</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/4.png">
-                <div class="caption">the tilemap need to add a rigidbody and set it as layer: ground</div>
+                <div class="caption">add rigidbody + ground layer</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/background/5.png">
-                <div class="caption">add a box collider to the trap, edit collider to fit the trap shape</div>
+                <div class="caption">collider setup for traps</div>
             </div>
+        </div>
     </div>
 
     <!-- 2 -->
     <div class="process-section">
-        <h3>02 — Character & Music</h3>
+        <h3>02 — Character</h3>
         <div class="process-text">
-            movement, death and restart, and interaction with objects
+            Movement, animation, interaction, and restart logic.
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/character/1.png">
-                <div class="caption">character set: Simple 2D Platformer Assets Pack</div>
+                <div class="caption">character asset</div>
             </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/character/2.png">
-                <div class="caption">add a rigidbody component and a box collider</div>
+                <div class="caption">rigidbody + collider</div>
             </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/character/3.png">
-                <div class="caption">there are several scripts for character behavior: collect apples, character movement, character life</div>
+                <div class="caption">behavior scripts</div>
             </div>
-
-            <div class="scroll-item">
-                <img src="unityprocess/character/7.png">
-                <div class="caption">creating the character's animation: drag the sprite into the animation window, change the samples number to change the speed of the animation</div>
-            </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/character/4.png">
-                <div class="caption">character animation setup, e.g. if run stopped, then idle</div>
+                <div class="caption">animation state machine</div>
             </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/character/5.png">
-                <div class="caption">character move at a constant steady speed of 7f to the right</div> 
+                <div class="caption">constant movement</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/character/6.png">
-                <div class="caption">in character life script, restart the background music when the character dies. i added it in character life script because it's more convenient</div> 
+                <div class="caption">restart music on death</div>
             </div>
-            
-
-
-    
+        </div>
     </div>
 
     <!-- 3 -->
     <div class="process-section">
-        <h3>03 — Apples(Beats)</h3>
+        <h3>03 — Beats (Apples)</h3>
         <div class="process-text">
-            adding beat sound to objects and making them react with the character
+            Adding audio feedback and interaction to collectible objects.
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/apple/1.png">
-                <div class="caption">add a box collider 2D, an animator, an audio source, and an apple sound script to the apple</div>
+                <div class="caption">components setup</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/apple/2.png">
-                <div class="caption">collecting apple sound script</div>
+                <div class="caption">sound script</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/apple/3.png">
-                <div class="caption">beat sound set: Casual Game SFX Pack</div>
+                <div class="caption">audio asset</div>
             </div>
         </div>
     </div>
@@ -309,27 +325,24 @@ A 2D pixelrhythm game where players using muscle to control the character to avo
     <div class="process-section">
         <h3>04 — Menu</h3>
         <div class="process-text">
-            creating a start menu interface for entering the game
+            Creating a scene-based menu and navigation system.
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/menu/4.png">
-                <div class="caption">save the game scene and create a new scene for the menu</div>
+                <div class="caption">new menu scene</div>
             </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/menu/5.png">
-                <div class="caption">create a panel and add buttons</div>
+                <div class="caption">UI buttons</div>
             </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/menu/6.png">
-                <div class="caption">open scene list (file - build profile - scenes list) number the both scenes</div>
+                <div class="caption">build settings (scene index)</div>
             </div>
-
             <div class="scroll-item">
                 <img src="unityprocess/menu/7.png">
-                <div class="caption">onclick event setup for menu buttons</div>
+                <div class="caption">button onclick setup</div>
             </div>
         </div>
     </div>
@@ -338,23 +351,26 @@ A 2D pixelrhythm game where players using muscle to control the character to avo
     <div class="process-section">
         <h3>05 — Arduino Connection</h3>
         <div class="process-text">
-            connecting Unity with Arduino input to control the gameplay
+            Mapping muscle sensor data to gameplay input.
         </div>
         <div class="scroll">
             <div class="scroll-item">
                 <img src="unityprocess/arduino/1.png">
-                <div class="caption">connection setup, set the number 800 which is the number when i squeeze detected by my muscle sensor</div>
+                <div class="caption">threshold setup</div>
             </div>
             <div class="scroll-item">
                 <img src="unityprocess/arduino/2.png">
-                <div class="caption">if the number is above 800, the character will jump, otherwise it will not</div>
+                <div class="caption">jump trigger logic</div>
             </div>
         </div>
     </div>
 
 </div>
 
+<!-- ===================== -->
 <!-- Arduino -->
+<!-- ===================== -->
+
 <div class="section">
     <h2>Arduino Process</h2>
 
@@ -362,17 +378,17 @@ A 2D pixelrhythm game where players using muscle to control the character to avo
 
         <div class="scroll-item">
             <img src="arduinoprocess/process1.png">
-            <div class="caption">setting up sensor input</div>
+            <div class="caption">sensor setup</div>
         </div>
 
         <div class="scroll-item">
             <img src="arduinoprocess/process2.JPG">
-            <div class="caption">testing muscle signal</div>
+            <div class="caption">muscle signal testing</div>
         </div>
 
         <div class="scroll-item">
             <img src="arduinoprocess/process3.JPG">
-            <div class="caption">connection method</div>
+            <div class="caption">circuit connection</div>
         </div>
 
     </div>
